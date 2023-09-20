@@ -13,6 +13,7 @@ llama-index = "^0.8.29.post1"
 transformers = "^4.33.2"
 llama-hub = "^0.0.30"
 fitz = "^0.0.1.dev2"
+pillow = "^10.0.1"
 
 
 [tool.poetry.group.dev.dependencies]
