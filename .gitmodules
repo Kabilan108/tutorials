@@ -1,0 +1,3 @@
+[submodule "fastai/fastbook"]
+	path = fastai/fastbook
+	url = git@github.com:fastai/fastbook.git
