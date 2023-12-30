@@ -20,7 +20,16 @@
     
     <script>
         function pow(x, n) {
-            /* function code will be written, empty now */
+            if (n < 0) return NaN;
+            if (Math.round(n) != n) return NaN;
+
+            let res = 1;
+
+            for (let i = 0; i < n; i++) {
+                res *= x;
+            }
+
+            return res;
         }
     </script>
 
