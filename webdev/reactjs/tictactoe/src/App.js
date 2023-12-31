@@ -1,6 +1,13 @@
-function Square({ value }) {    
+import { useState } from 'react';
+
+
+function Square() {    
+    // state variables are independent of each other
+    const [value, setValue] = useState(null);
+
+    // when button is clicked, set value to 'X'
     function handleClick() {
-        console.log('clicked');
+        setValue('X');
     }
 
     return (
@@ -21,7 +28,7 @@ export default function Board() {
                 <div key={i} className="board-row">
                     {Array.from({ length: 3 }, (_, j) => {
                         let k = i * 3 + j + 1;
-                        return <Square key={k} value={k} />
+                        return <Square key={k} />
                     })}
                 </div>
             ))}
