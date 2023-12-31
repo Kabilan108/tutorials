@@ -1,21 +1,30 @@
+function Square({ value }) {    
+    function handleClick() {
+        console.log('clicked');
+    }
+
+    return (
+        <button 
+            className="square"
+            onClick={handleClick}
+        >
+            {value}
+        </button>
+    );
+}
+
 export default function Board() {
     return (
         <>
-            <div className="board-row">
-                <button className="square">1</button>
-                <button className="square">2</button>
-                <button className="square">3</button>
-            </div>
-            <div className="board-row">
-                <button className="square">4</button>
-                <button className="square">5</button>
-                <button className="square">6</button>
-            </div>
-            <div className="board-row">
-                <button className="square">7</button>
-                <button className="square">8</button>
-                <button className="square">9</button>
-            </div>
+            {/* the mapFn to Array.from takes `element` and `index` */}
+            {Array.from({ length: 3 }, (_, i) => (
+                <div key={i} className="board-row">
+                    {Array.from({ length: 3 }, (_, j) => {
+                        let k = i * 3 + j + 1;
+                        return <Square key={k} value={k} />
+                    })}
+                </div>
+            ))}
         </>
     );
 }
