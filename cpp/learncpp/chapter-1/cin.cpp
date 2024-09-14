@@ -1,3 +1,5 @@
+// clangd shows the following warning "use of undeclared identifier 'std'". why?
+
 #include <iostream>
 
 // this prorgam produces a seg fault. why?
